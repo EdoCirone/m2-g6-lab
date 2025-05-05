@@ -470,7 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd076161bc9c305408b81f36891bb315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stringapersonale: (Bingo;Bango) A me piace la pasta
+  stringapersonale: (Bingo Bango Bongo) A me piace la pasta
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

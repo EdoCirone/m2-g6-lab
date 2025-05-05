@@ -10,6 +10,7 @@ public class Lab6_Es03 : MonoBehaviour
     //Creo la stringa da riempire
 
     public string stringapersonale = ("metti qui la tua frase");
+    private string formulazione = ("La stringa deve essere scritta così : (Qui ; Quo; Qua)");
 
     //Divido la stringa in intestazione e Frase 
 
@@ -17,7 +18,10 @@ public class Lab6_Es03 : MonoBehaviour
     {
         if (stringapersonale.IndexOf("(") != -1 && stringapersonale.IndexOf(")") != -1)
         {
+            // Creo un array e ci metto dentro le due stringhe
             string[] stringadivisa = stringapersonale.Split(')');
+
+            //tiro fuori due stringhe separate
 
             frasefinale = stringadivisa[1] ;
             return stringadivisa[0] + ")";
@@ -30,19 +34,15 @@ public class Lab6_Es03 : MonoBehaviour
        
     }
 
+    //Creo La funzione per gli errori (tiro fuori una booleana se ha errore o no, e il messaggio d'errore tramite variabile out string')
    
-    bool Controllalintestazione( string s, out string formulazione)
+    bool Controllalintestazione( string s, out string errore)
     {
-
-        //Dichiaro formulzaione anche se vuota perchè è un elemento out
-
-        formulazione = ("");
-
-
 
         //Controllo che la stringa abbia le parentesi 
 
         // if (s.IndexOf("(") == 0 && s.IndexOf(")") == s.Length - 1)
+
 
         if (s.StartsWith("(") && s.EndsWith(")"))
             {
@@ -52,14 +52,15 @@ public class Lab6_Es03 : MonoBehaviour
 
                  if (s.IndexOf(";") != -1)
                 {
-                    
+                    errore = ("");
                     return true;
+                     
                 }
 
                 else
                 {
 
-                formulazione = ("La stringa deve essere scritta così : (Qui ; Quo; Qua), hai scordato i ;");
+                errore = (formulazione + ": hai scordato i ;");
                 return false;
                 
                 }
@@ -68,7 +69,7 @@ public class Lab6_Es03 : MonoBehaviour
 
             else
             {
-            formulazione = ("La stringa deve essere scritta così : (Qui ; Quo; Qua), hai scordato le () ");
+            errore = (formulazione + ": controlla le () ");
             return false;
             }
 
@@ -99,7 +100,7 @@ public class Lab6_Es03 : MonoBehaviour
 
                 }
 
-                //Aggiungo la frase di Aragorn
+                //Aggiungo la frase 
 
                 Debug.Log(frasebase);
             }
@@ -114,7 +115,7 @@ public class Lab6_Es03 : MonoBehaviour
         //Ricordo la formulazione esatta 
         else
         {
-            Debug.Log(formulazione);
+           // Debug.Log(formulazione);
         }
     }
 

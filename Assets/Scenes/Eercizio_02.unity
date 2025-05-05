@@ -472,7 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackType: 0
   resistence: 3
-  weakness: 0
+  weakness: 1
   baseDamage: 20
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
