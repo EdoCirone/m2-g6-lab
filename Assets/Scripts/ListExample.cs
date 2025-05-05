@@ -12,10 +12,28 @@ public class ListExample : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0;i<numeroMax; i++)
+        for (int i = 0;i<=numeroMax; i++)
         {
-            miaLista.Add(i);
-            Debug.Log("ho aggiunto" + i + "ora la lista è " + miaLista);
+            int n = i + 1;
+            if(n % 3 == 0)
+            {
+                miaLista.Insert(miaLista.Count/2 , i);
+                Debug.Log("ho aggiunto " + i + "ora la lista è " + string.Join(", ", miaLista));
+           
+            }
+
+            else if ( n % 3 == 2)
+            {
+                 miaLista.Add(i);
+                 Debug.Log("ho aggiunto" + i + "ora la lista è " + string.Join(", ", miaLista));
+            }
+
+            else 
+            {
+                miaLista.Insert(0 , i);
+                Debug.Log("ho aggiunto " + i + "ora la lista è " + string.Join(", ", miaLista));
+            }
+
         }
     }
 
