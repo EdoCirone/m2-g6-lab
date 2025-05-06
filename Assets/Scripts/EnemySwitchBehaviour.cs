@@ -18,18 +18,18 @@ public class EnemySwitchBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-          
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
 
         switch (state)
         {
 
-            case STATE.IDLE: 
+            case STATE.IDLE:
                 Debug.Log("il nemico è fermo");
                 break;
             case STATE.ATTACKING:
@@ -41,9 +41,9 @@ public class EnemySwitchBehaviour : MonoBehaviour
             case STATE.AGGROED:
                 Debug.Log("il nemico sta inseguendo");
                 break;
-            
-            
-            
+
+
+
 
 
         }

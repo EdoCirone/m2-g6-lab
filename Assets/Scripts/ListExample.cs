@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,34 +6,32 @@ public class ListExample : MonoBehaviour
 {
 
     public int numeroMax;
-    private List<int>miaLista = new List<int>();
+    private List<int> miaLista = new List<int>();
 
     // Start is called before the first frame update
 
     void Start()
     {
-        for (int i = 0;i<=numeroMax; i++)
+        for (int i = 0; i <= numeroMax; i++)
         {
-            //int n = i + 1;
-
-            if(i % 3 == 0)
-            {
-                miaLista.Insert(0, i);
-                Debug.Log("ho aggiunto " + i + "ora la lista è " + string.Join(", ", miaLista));
-                
-           
-            }
-
-            else if ( i % 3 == 2)
-            {
-                 miaLista.Add(i);
-                 Debug.Log("ho aggiunto" + i + "ora la lista è " + string.Join(", ", miaLista));
-            }
-
-            else 
+            int n = i + 1;
+            if (n % 3 == 0)
             {
                 miaLista.Insert(miaLista.Count / 2, i);
-                Debug.Log("ho aggiunto " + i + "ora la lista è " + string.Join(", ", miaLista));
+                Debug.Log("ho aggiunto " + i + "ora la lista Ã¨ " + string.Join(", ", miaLista));
+
+            }
+
+            else if (n % 3 == 2)
+            {
+                miaLista.Add(i);
+                Debug.Log("ho aggiunto" + i + "ora la lista Ã¨ " + string.Join(", ", miaLista));
+            }
+
+            else
+            {
+                miaLista.Insert(0, i);
+                Debug.Log("ho aggiunto " + i + "ora la lista Ã¨ " + string.Join(", ", miaLista));
             }
 
         }
@@ -42,6 +40,6 @@ public class ListExample : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    } 
+
+    }
 }

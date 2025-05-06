@@ -20,7 +20,7 @@ public class DamageTypeExample : MonoBehaviour
     public DAMAGE_TYPE weakness;
     public int baseDamage;
 
-    string DanniInflitti (ref int  damage, DAMAGE_TYPE attackType, DAMAGE_TYPE resistence, DAMAGE_TYPE weakness)
+    string DanniInflitti(ref int damage, DAMAGE_TYPE attackType, DAMAGE_TYPE resistence, DAMAGE_TYPE weakness)
     {
         if (attackType == resistence && attackType == weakness)
         {
@@ -50,11 +50,11 @@ public class DamageTypeExample : MonoBehaviour
 
         Debug.Log("il danno inflitto è " + baseDamage);
 
-     
+
     }
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
