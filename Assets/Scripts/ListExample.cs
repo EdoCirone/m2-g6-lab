@@ -14,15 +14,17 @@ public class ListExample : MonoBehaviour
     {
         for (int i = 0;i<=numeroMax; i++)
         {
-            int n = i + 1;
-            if(n % 3 == 0)
+            //int n = i + 1;
+
+            if(i % 3 == 0)
             {
-                miaLista.Insert(miaLista.Count/2 , i);
+                miaLista.Insert(0, i);
                 Debug.Log("ho aggiunto " + i + "ora la lista è " + string.Join(", ", miaLista));
+                
            
             }
 
-            else if ( n % 3 == 2)
+            else if ( i % 3 == 2)
             {
                  miaLista.Add(i);
                  Debug.Log("ho aggiunto" + i + "ora la lista è " + string.Join(", ", miaLista));
@@ -30,7 +32,7 @@ public class ListExample : MonoBehaviour
 
             else 
             {
-                miaLista.Insert(0 , i);
+                miaLista.Insert(miaLista.Count / 2, i);
                 Debug.Log("ho aggiunto " + i + "ora la lista è " + string.Join(", ", miaLista));
             }
 
